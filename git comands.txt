@@ -1,0 +1,111 @@
+
+// first we need to set the user name and password for git
+git config --global user.name
+git config --global user.email
+git config --global --list // get the all global values
+
+// if the user name is not return the set the user name and password 
+git config --global user.name "HemaSasankSeelam"
+git config --global user.email "sample@gmail.com"
+
+
+// initialization of the git
+git init //creates the master branch use the main branch (Recomended 2 option)
+git init -b main // need to create the branch main instead of the master 
+
+// checking the status
+git status // return the un tracked or modified file in the working directory
+
+// deleting git from the folder
+Remove-Item -Recurse -Force .git (windows)
+rm -rf .git (mac)
+
+//checking the all the version
+git log 
+
+// adding file to staging area
+git add "file-name"
+git add "folder-name"
+git add . // adds all the file in the main folder
+
+// remove the file form the staging area to working
+git reset "file-name"
+git reset "folder-name"
+git reset . // removes all file from the staging
+
+another way to remove the files from git to working
+git rm --cached -r "file-name" // rm = remove, --cached = cached, -r = recursively
+git rm --cached -r "folder-name"
+git rm --cached -r .
+
+// add files to git
+//for adding file to git first we do staging then to git
+git commit -m "commit message" // -m = message
+
+//without staging direct to git
+git commit -a -m "commit message" // -m = message -a = adds automatically to staged
+
+//diff
+// to get the difference b.w two files 
+git diff // get the difference b/w working area an staging area
+git diff --staged // get the difference b/w staging area and git
+
+// changes to difference commits
+git checkout <hash code>
+
+// to go to main *
+git switch main
+
+//adding the remote repo
+git remote add [reference name] [https link  or ssh link]
+ex:git remote add origin git@github.com:HemaSasankSeelam/github-pra.git
+
+git remote -v // shows the reference-name, https-link, ssh-link
+
+//deleting the remote repo obj
+git remote remove [reference name]
+
+// push the local code to remote
+git push [reference name] [branch name]
+ex: git push origin main // takes the code from git and paste in remote repo
+
+// pull the code 
+git pull [reference name] [branch name]
+ex:git pull origin main // takes the code the remote repo and paste in git
+
+//show
+git show [tag-name|hash-code|brach-name] //show the data in that
+
+//tag
+//retrive the tag names or add the tag names
+git tag //return the all tag names
+
+// for create tag
+git tag -a "tag-name" -m "message" // -a = annotated -m = message
+
+//for pushing the tag to remote
+//you need to push the tag separetly
+git push [reference-name] tag-name
+
+//creating a new branch
+git switch -c [branch-name] // -c create a new branch
+or
+git checkout -b [branch-name] // -b = branch
+
+//to check the avilable branches locally
+git branch
+//to check the avilable branches locally and remote
+git branch --all
+
+// deleting the branch
+git branch --delete [branch-name]
+or
+git branch -d [branch-name] 
+
+//merging
+git merge [branch-name]
+ex: git merge feature1 // merge the feature1 to main
+
+// for untracking the file like password
+create the .gitignore file
+then add the file names that you don't want to track with extension inside the .gitignore
