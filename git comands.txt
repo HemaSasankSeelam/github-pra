@@ -27,10 +27,10 @@ git add . // adds all the file in the main folder
 
 // remove the file form the staging area to working
 git reset "file-name"
-git rest "folder-name"
-git rest . // removes all file from the working directory
+git reset "folder-name"
+git reset . // removes all file from the working directory
 
-another way to remove the files from staging to working
+another way to remove the files from git to working
 git rm --cached -r "file-name" // rm = remove, --cached = cached, -r = recursively
 git rm --cached -r "folder-name"
 git rm --cached -r .
