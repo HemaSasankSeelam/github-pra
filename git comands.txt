@@ -46,3 +46,5 @@ git commit -a -m "commit message" // -m = message -a = adds automatically to sta
 // to get the difference b.w two files 
 git diff // get the difference b/w working area an staging area
 git diff --staged // get the difference b/w staging area and git
+
+new
