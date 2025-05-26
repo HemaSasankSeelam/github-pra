@@ -34,3 +34,10 @@ another way to remove the files from staging to working
 git rm --cached -r "file-name" // rm = remove, --cached = cached, -r = recursively
 git rm --cached -r "folder-name"
 git rm --cached -r .
+
+// add files to git
+//for adding file to git first we do staging then to git
+git commit -m "commit message" // -m = message
+
+//without staging direct to git
+git commit -a -m "commit message" // -m = message -a = adds automatically to staged 
