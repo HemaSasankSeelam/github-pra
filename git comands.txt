@@ -47,4 +47,41 @@ git commit -a -m "commit message" // -m = message -a = adds automatically to sta
 git diff // get the difference b/w working area an staging area
 git diff --staged // get the difference b/w staging area and git
 
-new
+// changes to difference commits
+git checkout <hash code>
+
+// to go to main *
+git switch main
+
+//adding the remote repo
+git remote add [reference name] [https link  or ssh link]
+ex:git remote add origin git@github.com:HemaSasankSeelam/github-pra.git
+
+git remote -v // shows the reference-name, https-link, ssh-link
+
+// push the local code to remote
+git push [reference name] [branch name]
+ex: git push origin main // takes the code from git and paste in remote repo
+
+// pull the code 
+git pull [reference name] [branch name]
+ex:git pull origin main // takes the code the remote repo and paste in git
+
+//show
+git show [tag-name|hash-code|brach-name] //show the data in that
+
+//tag
+//retrive the tag names or add the tag names
+git tag //return the all tag names
+
+// for create tag
+git tag -a "tag-name" -m "message" // -a = annotated -m = message
+
+//for pushing the tag to remote
+//you need to push the tag separetly
+git push [reference-name] tag-name
+
+//creating a new branch
+git switch -c [branch-name] // -c create a new branch
+or
+git checkout -b [branch-name] // -b = branch
